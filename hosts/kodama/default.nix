@@ -10,7 +10,6 @@
     ../common/global
     ../common/users/luluyume
 
-    ../common/optional/kde.nix
     ../common/optional/pipewire.nix
   ];
 

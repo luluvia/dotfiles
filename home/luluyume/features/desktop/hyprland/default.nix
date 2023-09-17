@@ -17,6 +17,7 @@
         terminal = config.home.sessionVariables.TERMINAL;
       in [
         "SUPER,Return,exec,${terminal}"
+        "SUPER,x,exec,fuzzel"
       ];
     };
   };
