@@ -10,7 +10,7 @@
     ../common/global
     ../common/users/luluyume
 
-    ../common/optional/gnome.nix
+    ../common/optional/kde.nix
     ../common/optional/pipewire.nix
   ];
 
