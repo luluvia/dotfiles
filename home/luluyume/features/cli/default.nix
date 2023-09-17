@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     bottom # Better top
     ncdu # Better du
-    eza # Better ls
+    unstable.eza # Better ls
     ripgrep # Better grep
     httpie # Better curl
 
