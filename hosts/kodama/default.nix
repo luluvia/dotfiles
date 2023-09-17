@@ -11,6 +11,7 @@
     ../common/users/luluyume
 
     ../common/optional/pipewire.nix
+    ../common/optional/sddm.nix
   ];
 
   # Make sure the encrypted device is available
