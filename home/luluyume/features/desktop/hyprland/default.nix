@@ -18,6 +18,6 @@
 
       bind = $mod, Return, exec, kitty
       bind = $mod, x, exec, fuzzel 
-    ''
+    '';
   };
 }
