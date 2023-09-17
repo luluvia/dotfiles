@@ -3,12 +3,14 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.05";
+
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: 
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;

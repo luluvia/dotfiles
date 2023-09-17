@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  home.pkgs = with pkgs; [ jetbrains-toolbox ];
+  home.pkgs = with pkgs; [ unstable.jetbrains-toolbox ];
 }

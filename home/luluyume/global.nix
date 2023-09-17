@@ -1,10 +1,12 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, outputs, ... }:
 {
   imports = [
     ./features/cli
   ];
 
   nixpkgs = {
+    overlays = [ outputs.overlays.unstable-packages ];
+
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
