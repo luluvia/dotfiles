@@ -2,7 +2,7 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    settngs = {
+    settings = {
       primary = {
         mode = "dock";
         layer = "top";

@@ -11,14 +11,13 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = pkgs.inputs.hyprland.hyprland;
 
-    settings = {
-      bind = let
-        terminal = config.home.sessionVariables.TERMINAL;
-      in [
-        "SUPER,Return,exec,${terminal}"
-        "SUPER,x,exec,fuzzel"
-      ];
-    };
+    extraConfig = ''
+      $mod = SUPER
+
+      bind = $mod, Return, exec, kitty
+      bind = $mod, x, exec, fuzzel 
+    ''
   };
 }

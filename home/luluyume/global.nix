@@ -1,11 +1,12 @@
-{ lib, pkgs, config, outputs, ... }:
+{ lib, pkgs, config, inputs, outputs, ... }:
 {
   imports = [
+    inputs.hyprland.homeManagerModules.default
     ./features/cli
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.unstable-packages ];
+    overlays = builtins.attrValues outputs.overlays;
 
     config = {
       allowUnfree = true;
