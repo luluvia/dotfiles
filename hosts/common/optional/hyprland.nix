@@ -8,5 +8,5 @@
   programs.hyprland = {
     enable = true;
     package = pkgs.inputs.hyprland.hyprland;
-  }
+  };
 }
