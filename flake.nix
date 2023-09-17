@@ -12,8 +12,8 @@
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
-      systems = [ "x86_64-linux" ];
-      forEachSystem = f: nixpkgs.lib.genAttrs systems (sys: f pkgsFor.${sys});
+      # systems = [ "x86_64-linux" ];
+      # forEachSystem = f: nixpkgs.lib.genAttrs systems (sys: f pkgsFor.${sys});
       pkgsFor = nixpkgs.legacyPackages;
     in {
       inherit lib;
