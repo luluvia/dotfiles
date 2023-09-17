@@ -1,7 +1,7 @@
 {
   imports = [ 
     ./global.nix
-    ./features/desktop/hyprland
+    ./features/desktop/gnome
     ./features/development
   ];
 }
