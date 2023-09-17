@@ -5,7 +5,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkg.follows = "nixpkgs";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
@@ -17,14 +17,6 @@
       pkgsFor = nixpkgs.legacyPackages;
     in {
       inherit lib;
-      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
-
-      # Custom packages and modifications exported as overlays
-      overlays = import ./overlays { inherit inputs; };
-      # Reusable nixos modules
-      nixosModules = import ./modules/nixos;
-      # Reusable home-manager modules
-      homeManagerModules = import ./modules/home-manager;
 
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'

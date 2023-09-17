@@ -1,3 +1,6 @@
 {
-  imports = [ ./firefox-devedition.nix ];
+  imports = [
+    ./firefox-devedition.nix
+    ./font.nix
+  ];
 }

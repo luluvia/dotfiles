@@ -1,11 +1,10 @@
 { lib, pkgs, config, outputs, ... }:
 {
   imports = [
-    ../features/cli
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+    ./features/cli
+  ];
 
   nixpkgs = {
-    overlays = builtins.attrValues outputs.overlays;
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);

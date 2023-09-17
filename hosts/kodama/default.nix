@@ -29,6 +29,23 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware = {
+    nvidia = {
+      modesetting.enable = true;
+      prime.offload.enable = true;
+      prime.intelBusId = "PCI:0:2:0";
+      prime.nvidiaBusId = "PCI:1:0:0";
+    };
+
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ../common
@@ -11,6 +11,13 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.inputs.hyprland.hyprland;
+
+    settings = {
+      bind = let
+        terminal = config.home.sessionVariables.TERMINAL;
+      in [
+        "SUPER,Return,exec,${terminal}"
+      ];
+    };
   };
 }
