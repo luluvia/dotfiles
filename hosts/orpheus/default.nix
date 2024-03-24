@@ -13,6 +13,7 @@
     ../common/optional/pipewire.nix
     ../common/optional/kde.nix
     ../common/optional/power.nix
+    ../common/optional/plymouth.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
