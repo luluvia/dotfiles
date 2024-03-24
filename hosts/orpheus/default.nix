@@ -20,6 +20,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/efi";
+  boot.initrd.systemd.enable = true;
   boot.initrd.luks.devices = {
     root = {
       device = "/dev/disk/by-label/orph-luks";
