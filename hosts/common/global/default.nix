@@ -20,7 +20,7 @@
   environment.systemPackages = with pkgs; [
     lshw
     lsof
-    # fastfetch
+    fastfetch
   ];
 
   users.mutableUsers = true;

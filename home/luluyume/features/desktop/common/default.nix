@@ -4,6 +4,6 @@
     ./firefox-devedition.nix
     ./font.nix
     ./gitkraken.nix
-    ./jbtoolbox.nix
+    ./vivaldi.nix
   ];
 }

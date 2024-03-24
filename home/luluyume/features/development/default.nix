@@ -1,5 +1,6 @@
 {
   imports = [
-    ./vscode.nix
+    ./vscodium.nix
+    ./jetbrains.nix
   ];
 }

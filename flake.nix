@@ -2,11 +2,11 @@
   description = "Yume - NixOS system configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.05";
+    nixpkgs.url = "nixpkgs/nixos-23.11";
 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/hyprland";
@@ -33,9 +33,14 @@
           modules = [ ./hosts/sudama ];
           specialArgs = { inherit inputs outputs; };
         };
-        # Laptop
+        # Laptop (retired)
         kodama = lib.nixosSystem {
           modules = [ ./hosts/kodama ];
+          specialArgs = { inherit inputs outputs; };
+        };
+        # Laptop
+        orpheus = lib.nixosSystem {
+          modules = [ ./hosts/orpheus ];
           specialArgs = { inherit inputs outputs; };
         };
       };
@@ -50,6 +55,11 @@
         };
         "luluyume@kodama" = lib.homeManagerConfiguration {
           modules = [ ./home/luluyume/kodama.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
+        "luluyume@orpheus" = lib.homeManagerConfiguration {
+          modules = [ ./home/luluyume/orpheus.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };

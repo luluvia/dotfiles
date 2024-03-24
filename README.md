@@ -10,8 +10,9 @@ Configuration files for my NixOS machines and dotfiles for my user accounts. Req
   - `common`: Common configurations for all hosts.
     - `global`: Global configurations for all hosts.
     - `optional`: Optional configurations for all hosts.
-  - `sudama`: Desktop PC - i5-13600KF, 32GB RAM, RTX 3080 | Hyprland
-  - `kodama`: Laptop - i7-11700H, 16GB RAM, GTX 3060 | Hyprland
+  - `sudama`: Desktop PC - i5-13600KF, 32GB RAM, RTX 3080 | Hyprland (inactive)
+  - `kodama`: Laptop - i7-11700H, 16GB RAM, GTX 3060 | Hyprland (retired)
+  - `orpheus`: Laptop - i7-12700H, 16GB RAM, Arc A370M | Plasma 6
 - `home`: User-specific configurations, accessible via `home-manager switch --flake '.#<username>@<hostname>'`.`
 
 ## Acknowledgements

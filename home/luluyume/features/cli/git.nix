@@ -1,4 +1,8 @@
 { config, ... }: {
+  home.packages = with pkgs; [
+    lazygit
+    git-credential-oauth
+  ];
   programs.git = {
     enable = true;
     userName = "Lulu Yume";
